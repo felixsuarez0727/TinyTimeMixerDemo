@@ -68,11 +68,11 @@ This script will:
 
 ## Showing chart made with loaded data
 The data loaded is used to build a chart.
-![Data Preview](images/preview.png)
+![Data Preview](images/preview.jpg)
 
 ## Showing forecast chart
 Once the data is loaded and the forescast is done base on the mentioned data, the new chart is generated to show the forecast data.
-![Forecast chart view](images/forecast.png)
+![Forecast chart view](images/forecast.jpg)
 
 
 ## Dataset
