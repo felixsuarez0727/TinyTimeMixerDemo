@@ -9,7 +9,7 @@ This model is useful in scenarios where series data is scarce or diverse.
 
 [Further details here!](https://huggingface.co/ibm-granite/granite-timeseries-ttm-r1)
 
-[Check this academic paper!](https://huggingface.co/ibm-granite/granite-timeseries-ttm-r1)
+[Check this academic paper!](https://arxiv.org/pdf/2401.03955)
 
 ## Prerequisites
 
