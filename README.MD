@@ -2,6 +2,14 @@
 
 This project demonstrates time series forecasting using the `tsfm_public` library and the TinyTimeMixer model. It loads energy consumption data, performs preprocessing, generates forecasts, and visualizes the results.
 
+## What is TinyTimeMixer?
+It is one of the many pretrained models from the family of "Granite Time Series". This models are developed by IBM.
+This models performs on principles of zero/few-shot learning, hence, it is used to provide predictions even with limited training data. This model is lightweight meaning it could run with minimial hardware requirements.
+This model is useful in scenarios where series data is scarce or diverse.
+
+[Further details here!](https://huggingface.co/ibm-granite/granite-timeseries-ttm-r1)
+[Check this academic paper!](https://huggingface.co/ibm-granite/granite-timeseries-ttm-r1)
+
 ## Prerequisites
 
 Before running the code, ensure you have the following installed:
@@ -56,6 +64,14 @@ This script will:
   -   Generate forecasts for the target time series.
   -   Display the last few rows of the forecast.
   -   Generate and display a plot comparing the actual data with the forecast.
+
+## Showing chart made with loaded data
+The data loaded is used to build a chart.
+![Data Preview](images/preview.png)
+
+## Showing forecast chart
+Once the data is loaded and the forescast is done base on the mentioned data, the new chart is generated to show the forecast data.
+![Forecast chart view](images/forecast.png)
 
 
 ## Dataset
