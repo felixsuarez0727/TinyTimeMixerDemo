@@ -2,7 +2,6 @@
 
 This project demonstrates time series forecasting using the `tsfm_public` library and the TinyTimeMixer model. It loads energy consumption data, performs preprocessing, generates forecasts, and visualizes the results.
 
-Also, this repo contains a new file named: `frecuency.py`, this new file uses the same model to forecast radio frecuencies, this time the dataset is `RadComOta2.45GHz`.
 
 ## What is TinyTimeMixer?
 It is one of the many pretrained models from the family of "Granite Time Series". This models are developed by IBM.
@@ -78,58 +77,9 @@ This script will:
 The data loaded is used to build a chart.
 ![Data Preview](images/preview.jpg)
 
-## Showing forecast chart
-Once the data is loaded and the forescast is done base on the mentioned data, the new chart is generated to show the forecast data.
-![Forecast chart view](images/forecast.jpg)
-
-
 ## Dataset for demo.py
 
 The dataset used in this demo is `energy_dataset.csv`, which contains hourly energy consumption data. It should be placed in the `archive` directory within the project root.
-
-## Running the Frecuency Script
-
-**Execute the `frecuency.py` script:**
-
-This script loads radar signal data from an HDF5 dataset and performs time series forecasting on the real and imaginary components of complex signals using a pretrained TinyTimeMixer model.
-
-```bash
-    python frecuency.py -mod PULSED -sig Airborne-detection -snr 0 -num 0
-```
-```bash
-        python frecuency.py -mod FMCW -sig "Radar Altimeter" -snr 0 -num 0
-```
-
-```bash
-        python frecuency.py -mod "AM-DSB" -sig "AM radio" -snr 0 -num 0
-```
-
-```bash
-        python frecuency.py -mod "PULSED" -sig "Air-Ground-MTI" -snr 0 -num 0
-```
-
-
-This script will:
-
-- Load a complex radar signal from the RadComOta2.45GHz.hdf5 dataset using HDF5 format.
-- Parse user-defined parameters for modulation type, signal type, SNR, and sample index via command-line arguments.
--   Extract and split the selected waveform into its real and imaginary components.
--   Plot the raw real and imaginary parts of the selected signal sample.
--   Normalize both real and imaginary components to prepare them for model input.
--   Construct a timestamped DataFrame combining the normalized components.
--   Load the pretrained TinyTimeMixer model (ibm-granite/granite-timeseries-ttm-r2) for time series forecasting.
--   Run a forecasting pipeline to predict the future values of the real and imaginary parts of the signal.
--   Denormalize the forecasted values to return them to their original scale.
-
-
-
-## Showing forecast frecuency chart
-Once the data is loaded and the forescast is done base on the data available in dataset `RadComOta2.45GHz.hdf5`.
-![Forecast chart view](images/forecast_frec.jpg)
-
-## Dataset for frecuency.py
-
-The dataset used in this code is `RadComOta2.45GHz.hdf5`, which contains data from different types of frecuencies. It should be placed in the `RadComOta2.45GHz` directory within the project root.
 
 ## Dependencies
 
@@ -153,9 +103,3 @@ The dataset used in this code is `RadComOta2.45GHz.hdf5`, which contains data fr
 -   You can experiment with different TinyTimeMixer models by changing the model name in the `from_pretrained` function.
 -   The `context_length` parameter controls the number of historical data points used for forecasting.
 -   Feel free to modify the script to explore different forecasting scenarios and datasets.
-
-# About frecuency.py
--   You can experiment plotting from the available data in the dataset `RadComOta2.45GHz`.
--   See how this code predicts possible frecuencies and plots its forecast!
--   Feel free trying to modify this code in order to improve the performance.
-
